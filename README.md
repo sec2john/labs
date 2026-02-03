@@ -14,6 +14,6 @@ El propósito de estos laboratorios es ofrecer escenarios "hechos a mano" que si
 
 | Laboratorio | Descripción | Dificultad | Enlace |
 | :--- | :--- | :--- | :--- |
-| **BASH_LOTL_01** | Post-explotación y movimiento lateral usando solo Bash. | Media | [Ver Lab](./BASH_LOTL_01) |
+| **BASH_LOTL_01** | Scanner de red y explotación de webserver remoto en Bash | Media | [Ver Lab](./BASH_LOTL_01) |
 
 *(Más laboratorios próximamente...)*
