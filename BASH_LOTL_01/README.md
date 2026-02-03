@@ -10,9 +10,9 @@ Este laboratorio simula un entorno de red interna diseñado para practicar técn
 El alumno comienza con acceso inicial a la **Máquina A**, un entorno restringido donde no existen herramientas de red comunes (como `nmap`, `arp` o `ping`). Deberá hacer uso de los descriptores de archivos de red de Bash (`/dev/tcp/`) y scripting para mapear el entorno y alcanzar el objetivo final en la **Máquina B**.
 
 ## Objetivos del Laboratorio
-Enumeración de Red: Identificar host activos en la subred interna 192.168.56.0/24 mediante scripts de Bash y descriptores de archivos de red (/dev/tcp/).
-Fuzzing de Directorios: Crear un enumerador de rutas web artesanal para identificar archivos sensibles y directorios ocultos en el servidor objetivo.
-Exfiltraciones de información encontradas en la primera fase.
+* Enumeración de Red: Identificar host activos en la subred interna 192.168.56.0/24 mediante scripts de Bash y descriptores de archivos de red (/dev/tcp/).
+* Explotación de serviidor web: Crear un enumerador de rutas web artesanal para identificar archivos sensibles y directorios ocultos en el servidor objetivo.
+* Exfiltraciones de información encontradas en la primera fase.
 
 ## Requisitos Previos (Instalación)
 
@@ -76,7 +76,11 @@ Usuario Root: root | Password: Ks45mm?@plOt7
 IP Interna: 192.168.56.96
 
 # ¿Cómo empiezo?
-Conectate a la máquina A con el usuario "guest". A partir de ahí debes realizar un script en bash que escanée la red interna 192.168.56.xXx.
+Abre un terminal y conectate a la máquina A con el usuario "guest". 
+```bash
+ssh guest@localhost -p 2222
+```
+A partir de ahí debes realizar un script en bash que escanée la red interna 192.168.56.xXx.
 
 En /home/guest tienes un directorio "solutions" con las soluciones, pero solo puedes acceder con acceso de root. :P
 
@@ -102,5 +106,6 @@ beacons: https://beacons.ai/sec2john
 buymeacoffee: https://buymeacoffee.com/sec2john
 
 ---
+
 
 
