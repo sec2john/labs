@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
     a.vm.network "private_network", ip: "192.168.56.10", name: "vboxnet0", auto_config: false
 
     # Red y Puertos para la Máquina A
-    # El alumno usará el puerto 2222 para entrar con SUS usuarios (guest/root)
+    # El alumno usará el puerto 2222 para entrar con usuario (guest). Root está dseshabilitado por ssh
     a.vm.network "forwarded_port", guest: 22, host: 2222, id: "ssh", auto_correct: true
     a.vm.network "private_network", ip: "192.168.56.10", name: "vboxnet0", auto_config: false, adapter: 2
     
@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
   # --- CONFIGURACIÓN MÁQUINA B (lotl-bash-machine_B-s2j) ---
   config.vm.define "sec2john-lotl-bash-machine-B" do |b|
     b.vm.box = "sec2john-lotl-bash-machine_B-s2j"
-    # URL de tu GitHub Release (Sustituir)
+    # URL de tu GitHub Release
     b.vm.box_url = "https://github.com/sec2john/labs/releases/download/v1.0/lotl-bash-machine_B-s2j.box"
     
     b.vm.hostname = "lotl-bash-machine-B-s2j"
