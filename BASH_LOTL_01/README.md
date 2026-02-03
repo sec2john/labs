@@ -97,16 +97,23 @@ Laboratorio creado por sec2john para la comunidad de ciberseguridad.
 # Redes Sociales y contacto:
 
 [ Youtube ](https://www.youtube.com/@sec2john)
+
 [ TikTok ](https://www.tiktok.com/@sec2john/)
+
 [ Instagram ](https://www.instagram.com/sec2john/)  
 
 [ Web ](https://sec2john.com/)
+
 [ Twitter ](https://x.com/sec2john)
+
 [ Github ](https://github.com/sec2john)
+
 [ beacons ](https://beacons.ai/sec2john )
+
 [ buymeacoffee ](https://buymeacoffee.com/sec2john)
 
 ---
+
 
 
 
