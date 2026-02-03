@@ -97,7 +97,7 @@ Laboratorio creado por sec2john para la comunidad de ciberseguridad.
 # Redes Sociales y contacto:
 
 [ Youtube ](https://www.youtube.com/@sec2john)
-[ TikTok ](https://www.tiktok.com/@sec2john/) 
+[ TikTok ](https://www.tiktok.com/@sec2john/)
 [ Instagram ](https://www.instagram.com/sec2john/)  
 
 [ Web ](https://sec2john.com/)
@@ -107,6 +107,7 @@ Laboratorio creado por sec2john para la comunidad de ciberseguridad.
 [ buymeacoffee ](https://buymeacoffee.com/sec2john)
 
 ---
+
 
 
 
