@@ -1,4 +1,4 @@
-# 🛡️ BASH LOTL 01 - Scanner de red y webserver remoto en Bash 
+# 🛡️ BASH LOTL 01 - Scanner de red y explotación de webserver remoto en Bash 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/43130bf7-86a3-4e33-a177-9d3b94ac8a77" width="672" height="384" alt="Esquema del Laboratorio">
@@ -106,6 +106,7 @@ Laboratorio creado por sec2john para la comunidad de ciberseguridad.
 * [ buymeacoffee ](https://buymeacoffee.com/sec2john)
 
 ---
+
 
 
 
