@@ -1,0 +1,52 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  # --- CONFIGURACIÓN MÁQUINA A (lotl-bash-machine_A-s2j) ---
+  config.vm.define "sec2john-lotl-bash-machine-A" do |a|
+    a.vm.box = "sec2john-lotl-bash-machine_A-s2j"
+    # URL de tu GitHub Release
+    a.vm.box_url = "https://github.com/sec2john/labs/releases/download/v1.0/lotl-bash-machine_A-s2j.box"
+    
+    a.vm.hostname = "lotl-bash-machine-A-s2j"
+
+    # Añadimos auto_config: false al final de la línea de red
+    a.vm.network "private_network", ip: "192.168.56.10", name: "vboxnet0", auto_config: false
+
+    # Red y Puertos para la Máquina A
+    # El alumno usará el puerto 2222 para entrar con SUS usuarios (guest/root)
+    a.vm.network "forwarded_port", guest: 22, host: 2222, id: "ssh", auto_correct: true
+    a.vm.network "private_network", ip: "192.168.56.10", name: "vboxnet0", auto_config: false, adapter: 2
+    
+    a.vm.provider "virtualbox" do |vb|
+      vb.name = "sec2john-lotl-bash-machine_A"
+      vb.memory = "1024"
+      vb.cpus = 1
+    end
+  end
+
+  # --- CONFIGURACIÓN MÁQUINA B (lotl-bash-machine_B-s2j) ---
+  config.vm.define "sec2john-lotl-bash-machine-B" do |b|
+    b.vm.box = "sec2john-lotl-bash-machine_B-s2j"
+    # URL de tu GitHub Release (Sustituir)
+    b.vm.box_url = "https://github.com/sec2john/labs/releases/download/v1.0/lotl-bash-machine_B-s2j.box"
+    
+    b.vm.hostname = "lotl-bash-machine-B-s2j"
+
+    # Añadimos auto_config: false aquí también
+    b.vm.network "private_network", ip: "192.168.56.96", name: "vboxnet0", auto_config: false
+    
+    # Red y Puertos para la Máquina B
+    # El alumno usará el puerto 2223 para entrar con root
+    b.vm.network "forwarded_port", guest: 22, host: 2223, id: "ssh", auto_correct: true
+    b.vm.network "private_network", ip: "192.168.56.96", name: "vboxnet0", auto_config: false, adapter: 2
+
+    b.vm.provider "virtualbox" do |vb|
+      vb.name = "sec2john-lotl-bash-machine_B"
+      vb.memory = "1024"
+      vb.cpus = 1
+    end
+  end
+
+end
