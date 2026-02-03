@@ -1,60 +1,90 @@
+# 🛡️ BASH LOTL 01 - Laboratorio de Post-Explotación
+
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/43130bf7-86a3-4e33-a177-9d3b94ac8a77" width="672" height="384" alt="thumb">
+  <img src="https://github.com/user-attachments/assets/43130bf7-86a3-4e33-a177-9d3b94ac8a77" width="672" height="384" alt="Esquema del Laboratorio">
 </p>
-🛡️ BASH LOTL 01 - Laboratorio de Post-Explotación
 
-📝 Descripción del Escenario
-Este laboratorio ha sido diseñado para practicar técnicas de Living off the Land (LotL) en entornos Linux, utilizando exclusivamente Bash para la enumeración y explotación.
+## Descripción del Escenario
+Este laboratorio simula un entorno de red interna diseñado para practicar técnicas de **Living off the Land (LotL)**. El objetivo principal es la enumeración y el movimiento lateral utilizando exclusivamente herramientas nativas de **Bash**.
 
-El escenario presenta una red segmentada donde el alumno obtiene acceso inicial a una máquina con herramientas muy limitadas (sin nmap, ping, arp ). El objetivo es demostrar cómo un atacante puede "vivir de la tierra", utilizando las capacidades nativas del intérprete de comandos para mapear la red interna y testar la seguridad de un servidor web.
+El alumno comienza con acceso inicial a la **Máquina A**, un entorno restringido donde no existen herramientas de red comunes (como `nmap`, `arp` o `ping`). Deberá hacer uso de los descriptores de archivos de red de Bash (`/dev/tcp/`) y scripting para mapear el entorno y alcanzar el objetivo final en la **Máquina B**.
 
-🎯 Objetivos del Laboratorio
+## Objetivos del Laboratorio
 Enumeración de Red: Identificar host activos en la subred interna 192.168.56.0/24 mediante scripts de Bash y descriptores de archivos de red (/dev/tcp/).
-
 Fuzzing de Directorios: Crear un enumerador de rutas web artesanal para identificar archivos sensibles y directorios ocultos en el servidor objetivo.
+Exfiltraciones de información encontradas en la primera fase.
 
-Exfiltracion: Filtraciones de información encontradas en la primera fase.
+## Requisitos Previos (Instalación)
 
-🚀 Despliegue con Vagrant
-Para levantar el laboratorio, asegúrate de tener instalados VirtualBox y Vagrant. Luego, sigue estos pasos:
+Para ejecutar este laboratorio necesitas **VirtualBox** y **Vagrant**. 
 
-Clonar/Descargar este repositorio.
+### En sistemas basados en Debian (Ubuntu, Kali, Parrot, etc.):
+Ejecuta los siguientes comandos para una instalación rápida:
 
-Desde una terminal en la carpeta del proyecto, ejecuta:
+```bash
+# Instalar VirtualBox
+sudo apt update && sudo apt install -y virtualbox virtualbox-ext-pack
 
-Bash
-vagrant up
-Vagrant descargará automáticamente las imágenes necesarias y configurará las redes internas.
+# Instalar Vagrant (Repositorio oficial de HashiCorp)
+wget -O- [https://apt.releases.hashicorp.com/gpg](https://apt.releases.hashicorp.com/gpg) | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] [https://apt.releases.hashicorp.com](https://apt.releases.hashicorp.com) $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install vagrant
+```
 
-Finalizar el Laboratorio: Una vez concluidas las pruebas, puedes eliminar todo el entorno para liberar recursos con el comando:
+💡 Nota: Si utilizas una distribución distinta (Arch Linux, Fedora, RedHat, etc.), por favor consulta la documentación oficial de cada herramienta para encontrar el comando de instalación adecuado.
 
-Bash
+##  Despliegue del Laboratorio
+Descarga el archivo Vagrantfile de este repositorio y colócalo en una carpeta vacía.
+
+Abre una terminal en esa carpeta y lanza el entorno:
+
+```Bash
+vagrant up   #Vagrant descargará las imágenes y configurará automáticamente las interfaces de red.
+```
+Finalizar y Limpiar: Una vez hayas terminado tus pruebas, puedes borrar las máquinas y sus discos para ahorrar espacio con:
+
+```Bash
 vagrant destroy -f
-🔌 Información de Conexión
-Máquina A (lotl-bash-machine-A-s2j)
-SSH: ssh guest@localhost -p 2222
+```
+# Credenciales y Acceso
+El acceso se realiza a través de túneles SSH mapeados a puertos locales del anfitrión:
 
-Usuario: guest | Password: 1234abcd
-
+## Máquina A (lotl-bash-machine-A-s2j)
+Acceso SSH: 
+```bash
+ssh guest@localhost -p 2222
+```
+Usuario Guest: guest | Password: 1234abcd
 Usuario Root: root | Password: Ks45mm?@plOt6
+Nota: El acceso root to esta habilitado por ssh (no intentes ssh root@localhost -p 2222) Lógate primero con el usuario 'guest' por ssh y una vez dentro realiza "su root" + root password
 
 IP Interna: 192.168.56.10
 
-Máquina B (lotl-bash-machine-B-s2j)
-SSH: ssh root@localhost -p 2223 (Acceso directo por puerto mapeado)
-
+## Máquina B (lotl-bash-machine-B-s2j)
+Acceso SSH: 
+```bash
+ssh root@localhost -p 2223
+```
 Usuario Root: root | Password: Ks45mm?@plOt7
 
 IP Interna: 192.168.56.96
 
-📺 Solución del Laboratorio
-Puedes encontrar la resolución completa de este laboratorio, donde explico paso a paso cómo crear los scripts de escaneo y realizar la intrusión usando solo Bash, en el siguiente vídeo de mi canal:
+# Solución Paso a Paso
+Si te quedas atascado o quieres ver cómo se resuelve este reto utilizando únicamente scripts en Bash, puedes ver mi resolución completa aquí:
 
-👉 Solo Bash para hackers éticos: usando el sistema contra sí mismo
+[Ver Solución en YouTube: Solo Bash para hackers éticos](https://youtu.be/4TZLbhAFbIg)
 
-Laboratorio creado por sec2john para fines educativos.
+Laboratorio creado por sec2john para la comunidad de ciberseguridad.
 
-Solo Bash para hackers éticos: usando el sistema contra sí mismo
-sec2john · 898 views
+Redes Sociales y contacto:
+TikTok:   / sec2john   
+Twitter: https://x.com/sec2john 
+Instagram:   / sec2john  
 
+Web: https://sec2john.com/ 
+Github: https://github.com/sec2john 
+beacons: https://beacons.ai/sec2john 
+buymeacoffee: https://buymeacoffee.com/sec2john
+
+---
 
