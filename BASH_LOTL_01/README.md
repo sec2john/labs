@@ -5,7 +5,7 @@
 </p>
 
 ## Descripción del Escenario
-Este laboratorio simula un entorno de red interna diseñado para practicar técnicas de **Living off the Land (LotL)**. El objetivo principal es la enumeración y el movimiento lateral utilizando exclusivamente herramientas nativas de **Bash**.
+Este laboratorio simula un entorno de red interna diseñado para practicar técnicas de **Living off the Land (LotL)**. El objetivo principal es la enumeración y el abuso de un webserver utilizando exclusivamente herramientas nativas de **Bash**.
 
 El alumno comienza con acceso inicial a la **Máquina A**, un entorno restringido donde no existen herramientas de red comunes (como `nmap`, `arp` o `ping`). Deberá hacer uso de los descriptores de archivos de red de Bash (`/dev/tcp/`) y scripting para mapear el entorno y alcanzar el objetivo final en la **Máquina B**.
 
@@ -96,16 +96,18 @@ Laboratorio creado por sec2john para la comunidad de ciberseguridad.
 
 # Redes Sociales y contacto:
 
-TikTok:   / sec2john   
-Twitter: https://x.com/sec2john 
-Instagram:   / sec2john  
+[ Youtube ](https://www.youtube.com/@sec2john)
+[ TikTok ](https://www.tiktok.com/@sec2john/) 
+[ Instagram ](https://www.instagram.com/sec2john/)  
 
-Web: https://sec2john.com/ 
-Github: https://github.com/sec2john 
-beacons: https://beacons.ai/sec2john 
-buymeacoffee: https://buymeacoffee.com/sec2john
+[ Web ](https://sec2john.com/)
+[ Twitter ](https://x.com/sec2john)
+[ Github ](https://github.com/sec2john)
+[ beacons ](https://beacons.ai/sec2john )
+[ buymeacoffee ](https://buymeacoffee.com/sec2john)
 
 ---
+
 
 
 
