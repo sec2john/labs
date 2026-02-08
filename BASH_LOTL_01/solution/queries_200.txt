@@ -1,0 +1,9 @@
+#Comandos curl contra el servidor para los recursos que dan 200
+curl -s -i http://192.168.56.96/backup
+curl -o db.sql http://192.168.56.96/backup/db.sql
+
+curl -s -i http://192.168.56.96/backup/users.txt
+curl -o users.txt http://192.168.56.96/backup/users.txt
+
+curl -i -s http://192.168.56.96/hidden042
+

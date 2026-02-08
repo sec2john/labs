@@ -1,0 +1,25 @@
+curl http://192.168.56.96/
+
+curl -s -i http://192.168.56.96/
+
+HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.13.5
+Date: Fri, 30 Jan 2026 16:44:31 GMT
+
+<h1>Python Web Server</h1>
+<p>There are many urls [Dissalow: ed] in this server.</p>
+
+#------------------------------------------------------------
+
+curl -s -i http://192.168.56.96/robots.txt
+
+#Es grande! Nos lo llevamos a un fichero
+
+#Crear wordlist desde robots.txt
+# tres opciones
+
+curl -s http://192.168.56.96/robots.txt | grep -Ei "disallow|allow" | cut -d'/' -f2 > wordlist_robots.txt
+
+curl -s http://192.168.56.96/robots.txt | grep -Ei "disallow|allow" | awk -F': /' '{print $2}' > wordlist_robots.txt
+
+curl -s -i http://192.168.56.96/robots.txt | grep -iE "disallow|allow" | sed -E 's/^.+: \///g' > wordlist_robots.txt
