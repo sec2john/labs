@@ -15,5 +15,6 @@ El propósito de estos laboratorios es ofrecer escenarios "hechos a mano" que si
 | Laboratorio | Descripción | Dificultad | Enlace |
 | :--- | :--- | :--- | :--- |
 | **BASH_LOTL_01** | Scanner de red y explotación de webserver remoto en Bash | Media | [Ver Lab](./BASH_LOTL_01) |
+| **BASH_LOTL_02** | Reconocimiento de web server, crawling, diccionario y fuzzing en Bash | Media | [Ver Lab](./BASH_LOTL_02) |
 
 *(Más laboratorios próximamente...)*
