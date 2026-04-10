@@ -1,0 +1,5 @@
+curl -O https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/raft-medium-words.txt
+
+c=0; while read line; c=$((c+1)); do printf "\r\033[K$c"; res=$(curl -s -w "%{http_code}" http://192.168.56.200:8080/$line); if [[ $res =~ 2 ]]; then echo -e "\t http://192.168.56.200:8080/$line --> 200"; fi; done < raft-small-words.txt
+
+curl -X POST -d "u=dev.ops@acerocorp.net&p=Shadow_Dev_2026" http://192.168.56.200:8080/auth

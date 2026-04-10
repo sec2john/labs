@@ -1,0 +1,11 @@
+curl -s "http://192.168.56.200:8080/seguridad"
+
+#los <!--- se estan ignorando en nuestra creacion del diccionario
+
+curl -s "http://192.168.56.200:8080/seguridad" | sed 's/>/> /g' | sed 's/<[^>]*>//g' |    tr ' ' '\n'
+
+#transofrmar a
+
+curl -s "http://192.168.56.200:8080/seguridad" | sed 's/>/> /g' | sed 's/<!--//g; s/-->//g' | sed 's/<[^>]*>//g' |    tr ' ' '\n'
+
+curl -X POST -d "u=admin.tech@acerocorp.net&p=23st.Madrid" http://192.168.56.200:8080/auth
