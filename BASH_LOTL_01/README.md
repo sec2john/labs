@@ -89,8 +89,9 @@ Si te quedas atascado o quieres ver cómo se resuelve este reto utilizando únic
 
 [Ver Solución en YouTube: Solo Bash para hackers éticos](https://youtu.be/4TZLbhAFbIg)
 
-Me encuentras en la comundad de discord gratuita junto a Lionxsecurity y otras actividades aqui:
-https://sec2john.lionxsecurity.es/
+🤝 Únete a nuestra Comunidad:
+📱 WhatsApp: https://chat.whatsapp.com/CJYbSY9MT8f7J3IMgvOCKz
+🎮 Discord: https://discord.gg/QZnDg2DpDv
 
 Laboratorio creado por sec2john para la comunidad de ciberseguridad.
 
