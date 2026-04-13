@@ -92,7 +92,7 @@ En /home/guest tienes un directorio "solutions" con las soluciones, pero solo pu
 # Solución Paso a Paso
 Si te quedas atascado o quieres ver cómo se resuelve este reto utilizando únicamente scripts en Bash, puedes ver mi resolución completa aquí:
 
-[Ver Solución en YouTube: Solo Bash para hackers éticos]()
+[Ver Solución en YouTube: Solo Bash para hackers éticos](https://youtu.be/NjQ_ldajU6c?si=aEfbyMY6Ne7ocmJO)
 
 🤝 Únete a nuestra Comunidad:
 📱 WhatsApp: https://chat.whatsapp.com/CJYbSY9MT8f7J3IMgvOCKz
