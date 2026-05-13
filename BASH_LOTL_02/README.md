@@ -95,8 +95,8 @@ Si te quedas atascado o quieres ver cómo se resuelve este reto utilizando únic
 [Ver Solución en YouTube: Solo Bash para hackers éticos LOTL2](https://youtu.be/NjQ_ldajU6c?si=aEfbyMY6Ne7ocmJO)
 
 🤝 Únete a nuestra Comunidad:
-📱 WhatsApp: https://chat.whatsapp.com/CJYbSY9MT8f7J3IMgvOCKz
-🎮 Discord: https://discord.gg/QZnDg2DpDv
+📱 WhatsApp: https://chat.whatsapp.com/Dcxkva9NZRn2auJ4TIFM8W
+🎮 Discord: https://discord.gg/dKYeW5y9a2
 
 Laboratorio creado por sec2john para la comunidad de ciberseguridad.
 
